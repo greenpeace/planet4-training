@@ -43,7 +43,7 @@ job_definitions:
           <<: *docker_auth
     working_directory: /src
     steps:
-      - run: ./checkout.sh
+      - run: exit
       - run: ./mergescenarios.sh
       - run: mkdir /app/ -p
       - run: ./makehistory.sh
@@ -94,6 +94,7 @@ job_definitions:
             - composer-v5-{{ .Branch }}
             - composer-v5
       - run: |
+          exit  
           if [[ -d source/cache ]]; then ls -al source/cache; fi
       - run: activate-gcloud-account.sh
       - run: mkdir -p /tmp/workspace/var /tmp/workspace/src
