@@ -31,7 +31,6 @@ job_environments:
       GCLOUD_CLUSTER: p4-development
       HELM_NAMESPACE: develop
       HELM_RELEASE: planet4-training
-      NEWRELIC_APPNAME: P4 training Development
       WP_DB_NAME: planet4-training_wordpress_develop
       WP_STATELESS_BUCKET: planet4-training-stateless-develop
 
