@@ -6,6 +6,9 @@
 		"greenpeace/planet4-master-theme" : "dev-main"
 	},
 	"scripts": {
-		"site:custom" : []
+		"install:plugin-seo-internal-linker": "wp plugin install --activate https://storage.googleapis.com/planet4-3rdparty-plugins/planet4-seo-internal-linker-0.1.0.zip",
+        "site:custom": [
+            "@install:plugin-seo-internal-linker"
+        ]
 	}
 }
